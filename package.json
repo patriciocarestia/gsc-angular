@@ -1,0 +1,23 @@
+{
+  "name": "gsc-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patriciocarestia/gsc-angular.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patriciocarestia/gsc-angular/issues"
+  },
+  "homepage": "https://github.com/patriciocarestia/gsc-angular#readme",
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}
