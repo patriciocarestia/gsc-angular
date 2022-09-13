@@ -2,7 +2,6 @@
 
 const elementoInventario: [string, number] = ['tuerca', 11];
 
-// despues lo desestructuramos
 const [nombre, cantidad]: [string, number] = elementoInventario;
 const mensaje: string = agregarInventario(nombre, cantidad);
 
