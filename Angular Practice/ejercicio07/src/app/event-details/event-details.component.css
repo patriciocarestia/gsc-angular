@@ -1,0 +1,12 @@
+.container {
+    font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+.in-block {
+    display: inline-block;
+    padding: 1.5rem 1rem;
+}
+
+.headers {
+    font-weight: bold;
+}

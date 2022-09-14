@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChildComponent } from '../child/child.component';
 
 @Component({
   selector: 'app-parent',
@@ -7,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
-  currentCounter = 0;
-  
+  @ViewChild('child') child: ChildComponent;
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  receiveMessage($event: number) {
-    this.currentCounter = $event
+  stop(){
+    this.child.stopTimer();
   }
 
 }
