@@ -10,7 +10,7 @@ interface Swimmer {
     swim(depth: number): void;
 }
 
-// Alias de tipo
+// Type Alias
 type BirdOrFish = Bird | Fish;
 
 class Bird implements EggLayer, Flyer {
