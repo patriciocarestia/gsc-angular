@@ -1,0 +1,32 @@
+form {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .9rem;
+}                                                  
+
+label {
+    display: block;
+}                                                   
+
+.form-group {
+    margin-top: 5px;
+}
+ 
+button:disabled {
+    background-color: #97929248;
+    cursor: not-allowed;
+}
+
+.isInvalid {
+    background-color : #dddddd; 
+}
+
+small {
+    display: block;
+    color: red;
+    margin: .5rem 0;
+}
+
+button {
+    margin-top: 1rem;
+}
