@@ -1,0 +1,20 @@
+<div>
+    <p><strong>Name</strong>: {{event?.name}}</p>
+    <p><strong>Date</strong>: {{event?.date}} </p>      
+    <p><strong>Time</strong>: {{event?.time}}</p>
+    <p><strong>Location</strong>: {{event?.location?.address}}, {{event?.location?.city}}, {{event?.location?.country}}</p>
+    <div *ngIf="event?.reviewed">
+        <label>Reviewed: 
+            <input type="checkbox" checked (change)="reviewed()" />
+        </label>
+    </div>
+    <div *ngIf="!event?.reviewed">
+        <label>Reviewed: 
+            <input type="checkbox" (change)="reviewed()" />
+        </label>
+    </div>
+</div>
+
+<br>
+
+<button (click)="returnToEvents()">Return to events</button>
