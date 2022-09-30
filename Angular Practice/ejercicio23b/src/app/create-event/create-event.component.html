@@ -1,0 +1,106 @@
+<div>
+  <form #eventForm="ngForm"
+  (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="event-name">Nombre del evento:</label>
+      <input id="event-name" 
+      [(ngModel)]="eventName" 
+      name="name"
+      #name="ngModel"
+      required 
+      type="text"/>
+      <div [hidden]="name.valid || name.pristine"
+      class="alert">
+        Nombre requerido
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="date">Fecha: </label>
+      <input id="date" 
+      [(ngModel)]="eventDate" 
+      name="date"
+      #date="ngModel"
+      required 
+      forbiddenDate
+      type="text"/>
+      <div [hidden]="date.valid || date.pristine"
+      class="alert">
+        Fecha requerida
+      </div>
+      <div *ngIf="date.errors?.['saturdayDate']">
+        La fecha no puede ser sabado
+      </div>
+      <div *ngIf="date.errors?.['sundayDate']">
+        La fecha no puede ser domingo
+      </div>
+
+
+
+    </div>
+
+    <div class="form-group">
+      <label for="time">Hora: </label>
+      <input id="time"
+      [(ngModel)]="eventTime" 
+      name="time"
+      #time="ngModel"
+      required 
+      type="text"/>
+      <div [hidden]="time.valid || time.pristine"
+      class="alert">
+        Hora requerida
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label for="address">Dirección: </label>
+      <input id="address"
+      [(ngModel)]="eventAddress" 
+      name="address"
+      #address="ngModel"
+      required 
+      type="text"/>
+      <div [hidden]="address.valid || address.pristine"
+      class="alert">
+        Dirección requerida
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="city">Ciudad: </label>
+      <input id="city"
+      [(ngModel)]="eventCity" 
+      name="city"
+      #city="ngModel"
+      required 
+      type="text"/>
+      <div [hidden]="city.valid || city.pristine"
+      class="alert">
+        Ciudad requerida
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="country">Pais: </label>
+      <input id="country"
+      [(ngModel)]="eventCountry" 
+      name="country"
+      #country="ngModel"
+      required 
+      type="text"
+      pattern="[A-Z]{2}"/>
+      <div [hidden]="country.valid || country.pristine"
+      class="alert">
+        País requerido
+      </div>
+      <div *ngIf="country.errors?.['pattern']" style="font-weight: bold;">
+        El país debe constar de 2 letras mayúsculas
+      </div>
+    </div>
+
+    <button type="submit"  [disabled]="eventForm.invalid" class="btn btn-primary">Guardar</button>
+    <button type="button" class="btn btn-default" (click)="cancel()">Cancelar</button>
+  </form>
+</div>

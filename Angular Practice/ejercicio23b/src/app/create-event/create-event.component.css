@@ -1,0 +1,28 @@
+form {
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: .9rem;
+}                                                        
+
+label {
+    display: block;
+}                                                   
+
+.form-group {
+    margin-top: 5px;
+}
+ 
+.ng-valid {
+    border-color: green;
+}
+.ng-invalid {
+    border-color: red;
+}
+
+.alert {
+    color: red;
+}
+
+button {
+    margin: .7rem 0;
+}
